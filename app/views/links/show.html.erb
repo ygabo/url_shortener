@@ -1,12 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Link in:</b>
-  <%= @link.link_in %>
+  <b>Shortened URL: </b><br/>
+  <%= "#{request.env["HTTP_HOST"]}/" + @link.link_in %>
 </p>
 
 <p>
-  <b>Link out:</b>
+  <b>Redirects to:</b></br>
   <%= @link.link_out %>
 </p>
 
