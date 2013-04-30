@@ -14,9 +14,9 @@ class LinksController < ApplicationController
   # GET /links/1.json
   def show
     @link = Link.find(params[:id])
-
+   
     respond_to do |format|
-      format.html # show.html.erb
+      format.html # new.html.erb
       format.json { render json: @link }
     end
   end
@@ -80,4 +80,11 @@ class LinksController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def redirect_me
+    @link = Link.where(link_in: params[:link_in]).first
+
+    redirect_to @link.link_out
+  end
+
 end
