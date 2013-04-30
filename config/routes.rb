@@ -1,4 +1,7 @@
 UrlShortener::Application.routes.draw do
+  resources :links
+
+
   authenticated :user do
     root :to => 'home#index'
   end

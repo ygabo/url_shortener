@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Link in:</b>
+  <%= @link.link_in %>
+</p>
+
+<p>
+  <b>Link out:</b>
+  <%= @link.link_out %>
+</p>
+
+
+<%= link_to 'Edit', edit_link_path(@link) %> |
+<%= link_to 'Back', links_path %>
