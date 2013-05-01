@@ -1,2 +1,0 @@
-class ShortenerController < ApplicationController
-end
