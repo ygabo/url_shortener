@@ -1,7 +1,8 @@
 <p id="notice"><%= notice %></p>
 <p>
   <b>Shortened URL: </b><br/>
-  <%= "#{request.env["HTTP_HOST"]}/" + @link.link_in %>
+  <%= text_field_tag( "Shortened URL:", "#{request.env["HTTP_HOST"]}/#{@link.link_in}", 
+  						{focus: true}) %>
 </p>
 <p>
   <b>Redirects to:</b></br>

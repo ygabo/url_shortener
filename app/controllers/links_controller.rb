@@ -82,7 +82,7 @@ class LinksController < ApplicationController
   end
 
   def redirect_me
-    @link = Link.where(link_in: params[:link_in]).first
+    @link = Link.where(link_in: params[:link_in]).first || not_found
 
     redirect_to @link.link_out
   end
